@@ -1,8 +1,9 @@
 import { useState } from "react";
 import axios from "axios";
-import { API_URL } from "./config";
 
 export default function AddDoctor() {
+    const API_URL = import.meta.env.VITE_API_URL;  // ✅ read directly from .env
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",

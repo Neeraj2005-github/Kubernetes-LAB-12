@@ -3,9 +3,9 @@ import axios from "axios";
 import Button from '@mui/material/Button';
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { API_URL } from "./config";
 
 export default function ViewDoctors() {
+    const API_URL = import.meta.env.VITE_API_URL;  // ✅ read directly from .env
   const [doctors, setDoctors] = useState([]);
   const [error, setError] = useState("");
 
